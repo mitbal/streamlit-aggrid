@@ -115,7 +115,7 @@ class AgGridReturn(Mapping):
             ]
 
             if text_columns:
-                data.loc[:, text_columns] = data.loc[:, text_columns].applymap(
+                data.loc[:, text_columns] = data.loc[:, text_columns].apply(
                     lambda x: np.nan if x is None else str(x)
                 )
 
